@@ -289,3 +289,9 @@ var auditTask = function(taskEl) {
 loadTasks();
 
 
+//audit every 30 minutes
+setInterval(function () {
+  $(".card .list-group-item").each(function(index, el) {
+    auditTask(el);
+  });
+}, 1800000);
